@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.box {
+    @apply rounded-md p-2 bg-white dark:bg-dark-secondary;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: all 2s;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+    transform: translateY(30px);
+}
