@@ -1,3 +1,3 @@
 module.exports = {
-    publicPath: process.env.NODE_ENV === "production" ? "/simple-hackathon-vue/" : "/",
+  publicPath: process.env.NODE_ENV === "production" ? "/simple-hackathon-vue/" : "/",
 };
