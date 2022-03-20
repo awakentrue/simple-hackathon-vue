@@ -8,7 +8,8 @@
         <h2 class="text-2xl text-gray-600 dark:text-gray-400 opacity-75 font-normal leading-tight mb-8">Quick start project for hackathons</h2>
       </transition>
       <transition name="fade" appear>
-        <button class="bg-sky-blue dark:bg-dark-primary py-3 px-7 rounded-md text-white flex items-center gap-3">
+        <button class="bg-sky-blue dark:bg-dark-primary py-3 px-7 rounded-md text-white flex items-center gap-3"
+                @click="navigateToGithub">
           <v-icon name="brands/github" class="fill-current" />
           Github
         </button>
@@ -55,5 +56,10 @@ export default {
       return this.$store.state.theme === themes.dark;
     },
   },
+  methods: {
+    navigateToGithub() {
+      window.location.href = "https://github.com/awakentrue/simple-hackathon-vue";
+    }
+  }
 };
 </script>
