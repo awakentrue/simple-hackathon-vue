@@ -34,21 +34,9 @@
       <div class="h-full max-w-screen-lg mx-auto flex flex-col items-center justify-center">
         <h1 class="text-7xl text-gray-800 dark:text-white font-semibold leading-none tracking-tighter mb-4">features</h1>
         <div class="max-w-sm mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-start md:max-w-2xl lg:max-w-none mt-8">
-          <div class="relative flex flex-col items-center p-6 bg-white dark:bg-dark-secondary rounded-md shadow-md">
-            <v-icon name="th-large" class="fill-current text-sky-blue w-16 h-16 p-1 -mt-1 mb-2" />
-            <h4 class="text-xl font-bold leading-snug tracking-tight mb-1 text-gray-600 dark:text-gray-400">Layouts</h4>
-            <p class="text-gray-500 text-center">3 responsive layouts</p>
-          </div>
-          <div class="relative flex flex-col items-center p-6 bg-white dark:bg-dark-secondary rounded-md shadow-md">
-            <v-icon name="tailwind" class="fill-current text-sky-blue w-16 h-16 p-1 -mt-1 mb-2" />
-            <h4 class="text-xl font-bold leading-snug tracking-tight mb-1 text-gray-600 dark:text-gray-400">Tailwind</h4>
-            <p class="text-gray-500 text-center">Design based on Tailwind</p>
-          </div>
-          <div class="relative flex flex-col items-center p-6 bg-white dark:bg-dark-secondary rounded-md shadow-md">
-            <v-icon name="moon" class="fill-current text-sky-blue w-16 h-16 p-1 -mt-1 mb-2" />
-            <h4 class="text-xl font-bold leading-snug tracking-tight mb-1 text-gray-600 dark:text-gray-400">Themes</h4>
-            <p class="text-gray-500 text-center">Black & white themes</p>
-          </div>
+          <UiFeatureCard icon="th-large" header="Layouts" description="3 responsive layouts" />
+          <UiFeatureCard icon="tailwind" header="Tailwind" description="Design based on Tailwind" />
+          <UiFeatureCard icon="moon" header="Themes" description="Black & white themes" />
         </div>
       </div>
     </section>
@@ -57,9 +45,11 @@
 
 <script>
 import { themes } from "@/store";
+import UiFeatureCard from "@/components/ui/UiFeatureCard";
 
 export default {
   name: "TheLandingPages",
+  components: { UiFeatureCard },
   computed: {
     currentThemeIsDark() {
       return this.$store.state.theme === themes.dark;
