@@ -1,6 +1,8 @@
 # simple-hackathon-vue
 
-![dark](src/assets/layouts.gif)
+<p align="center">
+<img src="src/assets/layouts.gif" />
+</p>
 
 Simple [Vue-js](https://vuejs.org/) project template for hackathon based on [tailwindcss](https://tailwindcss.com/)
 
